@@ -109,7 +109,7 @@
           "/assets/images/japan-trip-2.png",
           "/assets/images/japan-trip-3.png"
         ],
-        "video": "/assets/videos/japan-trip.mov",
+        "video": "https://www.bilibili.com/video/BV16v64ByER5/",
         "description": "将旅行计划结构化为 RPG 式的任务流，并提供完整日语对话模板。",
         "stack": ["HTML 输出", "可视化模板", "场景化语言生成"]
       },

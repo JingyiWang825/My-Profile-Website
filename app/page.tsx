@@ -69,7 +69,7 @@ export default function HomePage() {
                 <p className="max-w-xl text-base text-ink/70">{content.meta.subtitle}</p>
                 <p className="max-w-xl text-lg text-ink/90 leading-relaxed">{content.meta.intro}</p>
               </div>
-
+              
               <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.25em] text-dusk">
                 <span className="accent-chip">寂静秩序</span>
                 <span className="rounded-full border border-mist px-5 py-2.5 backdrop-blur-sm">AI 叙事</span>
@@ -132,68 +132,63 @@ export default function HomePage() {
           description="用书与演讲构成我认知的坐标。"
         >
           <div className="grid gap-8 md:grid-cols-2">
-            {content.inspirations.items.map((item) => {
-              const card = (
-                <GlassCard className="flex h-full flex-col !p-0 overflow-hidden group">
-                  {item.image ? (
-                    <div className="relative aspect-video overflow-hidden">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-snow via-snow/20 to-transparent" />
-                      <div className="absolute bottom-4 left-6">
-                        <span className="text-[10px] uppercase tracking-[0.3em] text-ink/60 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
-                          {item.type}
-                        </span>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="pt-8 px-6">
+            {content.inspirations.items.map((item) => (
+              <GlassCard key={item.title} className="flex h-full flex-col !p-0 overflow-hidden group">
+                {item.image ? (
+                  <div className="relative aspect-video overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-snow via-snow/20 to-transparent" />
+                    <div className="absolute bottom-4 left-6">
                       <span className="text-[10px] uppercase tracking-[0.3em] text-ink/60 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
                         {item.type}
                       </span>
                     </div>
-                  )}
-                  
-                  <div className="p-8 pt-4 flex flex-col flex-1">
-                    <h3 className="text-2xl font-semibold text-ink leading-tight">{item.title}</h3>
-                    <p className="mt-2 text-sm font-medium text-ink/40 tracking-wide uppercase">{item.subtitle}</p>
-                    <p className="mt-6 text-base text-ink/70 leading-relaxed flex-1 italic">
-                      “{item.description}”
-                    </p>
-                    
-                    <div className="mt-8 flex items-center gap-6">
-                      {item.link ? (
-                        <span className="ai-link text-sm font-medium text-ink/80 hover:text-ink transition-colors cursor-pointer">
-                          点击查看
-                        </span>
-                      ) : null}
-                      {item.secondaryLink ? (
-                        <Link 
-                          href={item.secondaryLink} 
-                          className="ai-link text-sm font-medium text-ink/80 hover:text-ink transition-colors" 
-                          target="_blank" 
-                          rel="noreferrer"
-                        >
-                          在线阅读
-                        </Link>
-                      ) : null}
-                    </div>
                   </div>
-                </GlassCard>
-              );
-
-              return item.link ? (
-                <Link key={item.title} href={item.link} target="_blank" rel="noreferrer" className="block h-full">
-                  {card}
-                </Link>
-              ) : (
-                <div key={item.title} className="h-full">{card}</div>
-              );
-            })}
+                ) : (
+                  <div className="pt-8 px-6">
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-ink/60 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+                      {item.type}
+                    </span>
+                  </div>
+                )}
+                
+                <div className="p-8 pt-4 flex flex-col flex-1">
+                  <h3 className="text-2xl font-semibold text-ink leading-tight">{item.title}</h3>
+                  <p className="mt-2 text-sm font-medium text-ink/40 tracking-wide uppercase">{item.subtitle}</p>
+                  <p className="mt-6 text-base text-ink/70 leading-relaxed flex-1 italic">
+                    “{item.description}”
+                  </p>
+                  
+                  <div className="mt-8 flex items-center gap-6">
+                    {item.link ? (
+                      <Link 
+                        href={item.link} 
+                        target="_blank" 
+                        rel="noreferrer"
+                        className="ai-link text-sm font-medium text-ink/80 hover:text-ink transition-colors"
+                      >
+                        点击查看
+                      </Link>
+                    ) : null}
+                    {item.secondaryLink ? (
+                      <Link 
+                        href={item.secondaryLink} 
+                        className="ai-link text-sm font-medium text-ink/80 hover:text-ink transition-colors" 
+                        target="_blank" 
+                        rel="noreferrer"
+                      >
+                        在线阅读
+                      </Link>
+                    ) : null}
+                  </div>
+                </div>
+              </GlassCard>
+            ))}
           </div>
         </Section>
 
@@ -290,14 +285,26 @@ export default function HomePage() {
 
                 <div className="space-y-4">
                   {project.video ? (
-                    <div className="relative aspect-video overflow-hidden rounded-2xl mist-border shadow-2xl">
-                      <video
-                        className="h-full w-full object-cover"
-                        src={project.video}
-                        controls
-                        muted
-                        playsInline
-                      />
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-2xl mist-border shadow-2xl bg-black/20">
+                      {project.video.includes('bilibili.com') || project.video.includes('BV') ? (
+                        <iframe
+                          src={`https://player.bilibili.com/player.html?bvid=${project.video.match(/BV[a-zA-Z0-9]+/)?.[0] || project.video}&page=1&high_quality=1&danmaku=0&autoplay=0&muted=0`}
+                          className="absolute inset-0 h-full w-full"
+                          scrolling="no"
+                          border="0"
+                          frameBorder="no"
+                          framespacing="0"
+                          allowFullScreen={true}
+                        />
+                      ) : (
+                        <video
+                          className="h-full w-full object-cover"
+                          src={project.video}
+                          controls
+                          muted
+                          playsInline
+                        />
+                      )}
                     </div>
                   ) : null}
                   <div className={`grid ${project.media.length === 1 ? "grid-cols-1" : "grid-cols-2"} gap-4`}>
