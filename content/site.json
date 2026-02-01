@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "name": "Iliad",
+    "title": "AI 产品经理 / 设计工程师",
+    "subtitle": "1999 年生 · 本科英语翻译 · 研究生公共政策",
+    "intro": "把复杂译成简洁，把技术做成可感的体验。"
+  },
+  "about": {
+    "headline": "关于我",
+    "summary": "从上外到港科大，我用语言搭桥，用技术构建可理解的世界。",
+    "paragraphs": [
+      "我以创造确认主体：产品、叙事、以及这间数字屋子。",
+      "我的方法论是“杠杆与简洁”：功能必须像诗一样短，逻辑必须像冰一样清澈。我致力于将复杂的技术翻译成直觉可感的语言。",
+      "在公共政策视角下，我关注技术背后的系统性逻辑。我认为 AI 应该是一种赋能人的叙事媒介，让技术在算法之外保留一份人文的温度。"
+    ],
+    "timeline": [
+      {
+        "year": "2017",
+        "title": "英语翻译",
+        "detail": "语言训练让我更加注重语义细节与叙事节奏。"
+      },
+      {
+        "year": "2021",
+        "title": "公共政策",
+        "detail": "关注社会系统与公众视角，训练问题拆解与推演。"
+      },
+      {
+        "year": "2023",
+        "title": "AI PM",
+        "detail": "在产品与算法之间搭桥，让技术以人能理解的方式落地。"
+      }
+    ]
+  },
+  "inspirations": {
+    "headline": "灵感空间",
+    "items": [
+      {
+        "title": "Teach girls bravery, not perfection",
+        "subtitle": "Reshma Saujani · TED",
+        "type": "TED",
+        "image": "/assets/images/ted-stage.jpg",
+        "link": "https://www.youtube.com/watch?v=fC9da6eqaqg&pp=ygUOZ2lybHMgYmUgYnJhdmXYBgU%3D",
+        "description": "勇敢不是反叛，而是对自我标准的重构。"
+      },
+      {
+        "title": "《雪国》",
+        "subtitle": "川端康成",
+        "type": "小说",
+        "image": "/assets/images/snow-country.jpg",
+        "link": "https://book.douban.com/subject/36175282/",
+        "secondaryLink": "https://www.99csw.com/book/2548/76794.htm",
+        "description": "留白的寂静感，和人心的微光。"
+      },
+      {
+        "title": "《生活在别处》",
+        "subtitle": "米兰·昆德拉",
+        "type": "作家",
+        "link": "https://book.douban.com/subject/25900388/",
+        "description": "他让我相信结构与自由可以共存。"
+      },
+      {
+        "title": "行至山顶：看见中国职场女性领导者",
+        "subtitle": "麦肯锡报告",
+        "type": "报告",
+        "link": "/assets/docs/mckinsey-women-leaders.pdf",
+        "description": "洞察与证据支撑的领导力叙事。"
+      }
+    ]
+  },
+  "achievements": {
+    "headline": "荣耀勋章",
+    "narrative": "证书不仅是结果，它们背后也藏着我对自我秩序的重建与坚持。",
+    "items": [
+      {
+        "title": "CFA Program Verification",
+        "displayTitle": "CFA ESG Verification",
+        "image": "/assets/docs/CFA_ESG.jpg",
+        "link": "/assets/docs/CFA_Program_Verification_Letter.pdf"
+      },
+      {
+        "title": "JLPT N2 Verification",
+        "image": "/assets/docs/JLPT_N2_Verification_Letter.png",
+        "link": "/assets/docs/JLPT_N2_Verification_Letter.png"
+      },
+      {
+        "title": "WSET Level 1",
+        "image": "/assets/docs/WSET_1.jpg"
+      },
+      {
+        "title": "专业认证 1",
+        "image": "/assets/docs/cert-1.jpg"
+      },
+      {
+        "title": "专业认证 2",
+        "image": "/assets/docs/cert-2.jpg"
+      }
+    ]
+  },
+  "aiLab": {
+    "headline": "AI 实验室",
+    "intro": "我相信“技术共享”是连接创造者最好的方式。在这里，我开放了部分项目的核心逻辑（.md 源文件），你可以直接下载并探索它们的构建思路。让 AI 有审美、有温度、可解释。",
+    "projects": [
+      {
+        "title": "日本旅行日语装 x 助手",
+        "tagline": "生成旅行计划与场景化日语指南",
+        "downloadLink": "/assets/skills-download/japan-trip-skills.zip",
+        "media": [
+          "/assets/images/japan-trip-1.png",
+          "/assets/images/japan-trip-2.png",
+          "/assets/images/japan-trip-3.png"
+        ],
+        "video": "/assets/videos/japan-trip.mov",
+        "description": "将旅行计划结构化为 RPG 式的任务流，并提供完整日语对话模板。",
+        "stack": ["HTML 输出", "可视化模板", "场景化语言生成"]
+      },
+      {
+        "title": "微博热门创意实时分析",
+        "tagline": "热点解析 + 产品创意评分",
+        "downloadLink": "/assets/skills-download/weibo-skills.zip",
+        "media": ["/assets/images/49264ad935040c3e6566de2724fd73a0.png"],
+        "description": "抓取热搜并自动生成背景分析、风险点与可执行的产品灵感。",
+        "stack": ["数据抓取", "趋势分析", "创意评分体系"]
+      }
+    ]
+  },
+  "cats": {
+    "headline": "我和猫",
+    "story": [
+      "陪伴的节奏像雪落在夜里，轻但持续。",
+      "我在忙碌中被温柔拉回，也在它们的眼睛里复盘自己。"
+    ],
+    "gallery": [
+      {
+        "image": "/assets/images/cat-1.jpg",
+        "caption": "雪地里的安静"
+      },
+      {
+        "image": "/assets/images/cat-2.png",
+        "caption": "白昼的侧影"
+      },
+      {
+        "image": "/assets/images/cat-3.png",
+        "caption": "窗边的凝视"
+      },
+      {
+        "image": "/assets/images/cat-4.png",
+        "caption": "午后小憩"
+      },
+      {
+        "image": "/assets/images/cat-5.png",
+        "caption": "好奇的瞬间"
+      }
+    ]
+  }
+}
