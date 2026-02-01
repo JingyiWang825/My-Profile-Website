@@ -13,13 +13,13 @@ export default function CustomCursor() {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const moveCursor = (e) => {
+    const moveCursor = (e: any) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
     };
 
-    const handleMouseOver = (e) => {
-      if (e.target.closest("a, button, .ai-link, .card-hover")) {
+    const handleMouseOver = (e: any) => {
+      if ((e.target as HTMLElement).closest("a, button, .ai-link, .card-hover")) {
         setIsHovered(true);
       } else {
         setIsHovered(false);
