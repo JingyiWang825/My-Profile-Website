@@ -126,6 +126,7 @@ const Ribbons = ({
     `;
 
     function resize() {
+      if (!container) return;
       const width = container.clientWidth;
       const height = container.clientHeight;
       renderer.setSize(width, height);
@@ -182,6 +183,7 @@ const Ribbons = ({
 
     const mouse = new Vec3();
     function updateMouse(event: MouseEvent | TouchEvent) {
+      if (!container) return;
       let x = 0;
       let y = 0;
       const rect = container.getBoundingClientRect();
