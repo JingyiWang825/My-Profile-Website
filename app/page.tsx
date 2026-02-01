@@ -291,9 +291,7 @@ export default function HomePage() {
                           src={`https://player.bilibili.com/player.html?bvid=${project.video.match(/BV[a-zA-Z0-9]+/)?.[0] || project.video}&page=1&high_quality=1&danmaku=0&autoplay=0&muted=0`}
                           className="absolute inset-0 h-full w-full"
                           scrolling="no"
-                          border="0"
                           frameBorder="no"
-                          framespacing="0"
                           allowFullScreen={true}
                         />
                       ) : (
